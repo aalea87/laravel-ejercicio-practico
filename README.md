@@ -30,6 +30,9 @@ Para ejecutar la batería de pruebas
 php artisan test
 ```
 
+#### **En el directorio principal está presente el archivo "postman_collection.json" para importar la colección de endpoints a Postman para mayor agilidad.**
+
+
 ## Endpoints:
 
 #### Registro de Usuario:
