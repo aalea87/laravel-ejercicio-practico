@@ -13,7 +13,7 @@ Database .......................................................................
 
 ## Installation
 ```bash
-git clone https://github.com/imgrasooldev/laravel-rest-api.git
+git clone https://github.com/aalea87/laravel-ejercicio-practico.git
 cd laravel-rest-api
 ```
 Abrir el archivo .env en el directorio principal y edita los detalles de su base datos.
