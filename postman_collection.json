@@ -1,0 +1,758 @@
+{
+	"info": {
+		"_postman_id": "83b75aac-27c3-46c7-bf89-739209c04518",
+		"name": "Tarea",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/register?name=usuario&email=usuario@gmail.com&password=Clave.1234&confirmPassword=Clave.1234",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "usuario"
+						},
+						{
+							"key": "email",
+							"value": "usuario@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "Clave.1234"
+						},
+						{
+							"key": "confirmPassword",
+							"value": "Clave.1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/login?email=cliente@gmail.com&password=Clave.1234",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "cliente@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "Clave.1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "19|XKJajrjiikXZb9Cwa0PuqAoVNqbcCpw25ZDZZ6o1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/productos?page=1",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"productos"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos Cantidad",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|XmyuV0cMLqtjRcOnCXur6kC0lHwaag4l9hLKqM4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/productos?page=1",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"productos"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Producto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|xsWsItvkLTEdVV1DUaGgS2viCyXV1Dp3pUJbNIq1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/productos?nombre=Producto 1&precio=10.50&cantidad=50&categoria=Juguetes&etiqueta=Para Niños&descripcion=Descripcion.....&info=Informacion adicional&valoracion=1.2&sku=12345&imagenes=imagen.png,imagen2.png",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"productos"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Producto 1"
+						},
+						{
+							"key": "precio",
+							"value": "10.50"
+						},
+						{
+							"key": "cantidad",
+							"value": "50"
+						},
+						{
+							"key": "categoria",
+							"value": "Juguetes"
+						},
+						{
+							"key": "etiqueta",
+							"value": "Para Niños"
+						},
+						{
+							"key": "descripcion",
+							"value": "Descripcion....."
+						},
+						{
+							"key": "info",
+							"value": "Informacion adicional"
+						},
+						{
+							"key": "valoracion",
+							"value": "1.2"
+						},
+						{
+							"key": "sku",
+							"value": "12345"
+						},
+						{
+							"key": "imagenes",
+							"value": "imagen.png,imagen2.png"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Producto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "42|Ucc4lCWIfMREvITGEmjQZ22X54d9Azm9vA6zTVd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/productos/52?nombre=Producto 1111111&precio=10.50&cantidad=50&categoria=Juguetes&etiqueta=Para Niños&descripcion=Descripcion.....&info=Informacion adicional&valoracion=1.2&sku=5435432fdgfdgsdg&imagenes=imagen5.png,imagen6.png",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"productos",
+						"52"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Producto 1111111"
+						},
+						{
+							"key": "precio",
+							"value": "10.50"
+						},
+						{
+							"key": "cantidad",
+							"value": "50"
+						},
+						{
+							"key": "categoria",
+							"value": "Juguetes"
+						},
+						{
+							"key": "etiqueta",
+							"value": "Para Niños"
+						},
+						{
+							"key": "descripcion",
+							"value": "Descripcion....."
+						},
+						{
+							"key": "info",
+							"value": "Informacion adicional"
+						},
+						{
+							"key": "valoracion",
+							"value": "1.2"
+						},
+						{
+							"key": "sku",
+							"value": "5435432fdgfdgsdg"
+						},
+						{
+							"key": "imagenes",
+							"value": "imagen5.png,imagen6.png"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Producto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "42|Ucc4lCWIfMREvITGEmjQZ22X54d9Azm9vA6zTVd0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/productos/52?nombre=Producto 1111111&precio=10.50&cantidad=50&categoria=Juguetes&etiqueta=Para Niños&descripcion=Descripcion.....&info=Informacion adicional&valoracion=1.2&sku=5435432fdgfdgsdg&imagenes=imagen5.png,imagen6.png",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"productos",
+						"52"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Producto 1111111"
+						},
+						{
+							"key": "precio",
+							"value": "10.50"
+						},
+						{
+							"key": "cantidad",
+							"value": "50"
+						},
+						{
+							"key": "categoria",
+							"value": "Juguetes"
+						},
+						{
+							"key": "etiqueta",
+							"value": "Para Niños"
+						},
+						{
+							"key": "descripcion",
+							"value": "Descripcion....."
+						},
+						{
+							"key": "info",
+							"value": "Informacion adicional"
+						},
+						{
+							"key": "valoracion",
+							"value": "1.2"
+						},
+						{
+							"key": "sku",
+							"value": "5435432fdgfdgsdg"
+						},
+						{
+							"key": "imagenes",
+							"value": "imagen5.png,imagen6.png"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Producto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|xsWsItvkLTEdVV1DUaGgS2viCyXV1Dp3pUJbNIq1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/productos/52",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"productos",
+						"52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Producto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "25|SBj3oApMVzyYejv3kZjDNwXqiGli7UBLBw4hcOVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/productos/51",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"productos",
+						"51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Carrito",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3|owoNSbc9ssnz1s0vxprela4KDJHn2uhU2VhNGGkd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/carrito/?producto=1&cantidad=1",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"carrito",
+						""
+					],
+					"query": [
+						{
+							"key": "producto",
+							"value": "1"
+						},
+						{
+							"key": "cantidad",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Carrito",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|tShiPuse4DRB0NC3kJgIhUgXeFIlYpOpczIdIYMn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/carrito/31",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"carrito",
+						"31"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Carrito",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|tShiPuse4DRB0NC3kJgIhUgXeFIlYpOpczIdIYMn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/carrito",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell Carrito",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|tShiPuse4DRB0NC3kJgIhUgXeFIlYpOpczIdIYMn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/carrito",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articulos Vendidos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|tShiPuse4DRB0NC3kJgIhUgXeFIlYpOpczIdIYMn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/vendidos",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"vendidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ganancia Total",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|tShiPuse4DRB0NC3kJgIhUgXeFIlYpOpczIdIYMn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/ganancias",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"ganancias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stock Vacio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|tShiPuse4DRB0NC3kJgIhUgXeFIlYpOpczIdIYMn",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://{{base_url}}/api/vacio",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"vacio"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "127.0.0.1:8000\n",
+			"type": "default"
+		}
+	]
+}
