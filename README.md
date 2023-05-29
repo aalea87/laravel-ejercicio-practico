@@ -3,13 +3,13 @@
 </p>
 
 # LARAVEL REST API, EJERCICIO PRACTICO USANDO SANCTUM
-Una simple RESTAPI en Laravel, basado en un ejercicio practico.
+Una simple RESTAPI en Laravel, basado en un ejercicio práctico de una tienda.
 
-Laravel Version ...................................................................... 10.12.1
+Laravel Versión ...................................................................... 10.12.1
 
-PHP Version ........................................................................... 8.1.5
+PHP Versión ........................................................................... 8.1.5
 
-Database ................................................................................ MYSQL
+Gestor de Base de datos................................................................ MYSQL
 
 ## Installation
 ```bash
@@ -25,6 +25,10 @@ php artisan migrate:fresh --seed
 php artisan serve
 ```
 
+Para ejecutar la batería de pruebas
+```bash
+php artisan test
+```
 
 ## Endpoints:
 
